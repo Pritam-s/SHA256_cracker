@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
 <head>
-    <title> Pritam Singh sha256 Cracker</title>
+    <title>Pritam Singh SHA-256256 Cracker</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 </head>
 
-<body class= "ui container" style="background-color:#262626;">
+<body class= "ui container" style="background-color:black;">
 
 
-<div class= "ui black button" style="margin-top:10% ;background-color:black">
+<div class= "ui black" style="margin-top:10% ;background-color:black; color: white; text-align:center;">
 
-    <h1>Pritam Singh SHA256 cracker</h1>
-    <p>This application takes an sha256 hash of a four digit pin and check all the possible four digit PINs to determine the PIN. </p>
+    <h1>SHA-256 cracker</h1>
+    <p>This application takes an SHA-256 hash of a four digit pin/characters and check all the possible four digit PINS/characters to determine the original PIN/characters. </p>
     
     <p><strong>Accepted [ a-z, A-Z, 0-9 ]</strong></p>
 
@@ -28,7 +28,7 @@ if (isset($_GET['sha256'])) {
     $sha256 = $_GET['sha256'];
 
     // This is our alphabet
-    $txt = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz';
+    $txt = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()_=+';
     $show = 15;
 
     // Outer loop go go through the alphabet for the
@@ -148,20 +148,23 @@ if (isset($_GET['sha256'])) {
 }
 ?>
 </pre>
-    <!-- Use the very short syntax and call htmlentities() -->
-    <p>Pin: <?= htmlentities($goodtext); ?></p>
+    <!-- Calling htmlentities() -->
+    <h3>Pin : <span style="color:red ; background-color:black"><?= htmlentities($goodtext); ?></span></h3>
     <form>
-        <input type="text" placeholder="Please enter sha256 of exact 4 characters [ a-z, A-Z, 0-9 ]" name="sha256" size="60" />
-        <input type="submit" value="Crack sha256" />
-        <p><em>Note:- It may take upto 10-30 secs for the result to be displayed.</em></p>
+        <input type="text" placeholder="Please enter SHA-256 hash values of exact 4 characters [ a-z, A-Z, 0-9 ]" name="sha256" size="80" />
+        <input type="submit" value="Crack SHA-256" />
+        <p><br><em>Note:- It may take upto 10-30 secs for the result to be displayed.</em></p><br>
     </form>
-    <ul class= "ui justified container">
-        <li><button class="ui green button"><a style="color:white !important;" href="index.php">Reset</a></button></li><br>
-        <li><button class="ui violet button"><a style="color:white !important;" href="sha256.php">sha256 Encoder</a></button></li><br>
+    <!-- <ul class= "ui justified container"> -->
+        <p><button class="ui green button"><a style="color:white !important;" href="index.php">Reset</a></button></p><br>
+        <p><button class="ui violet button"><a style="color:white !important;" href="sha256.php">SHA-256 Encoder</a></button></p><br>
         <!--<li><a href="makecode.php">sha256 Code Maker</a></li> -->
-        <li><button  class="ui red button"><a style="color:white !important;" href="https://github.com/SaGE1704/sha256-Cracker" target="_blank">Source code for this application</a></button></li>
-    </ul>
+        <p><button  class="ui red button"><a style="color:white !important;" href="https://github.com/SaGE1704/SHA256_cracker" target="_blank">Source code for this application</a></button></p>
+       
+        <br><br><br><br><p style="color: #404040">Made By Pritam Singh ❤️</p>
 </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 </body>
