@@ -18,6 +18,7 @@
     
     <pre>
 Debug Output:
+
 <?php
 $goodtext = "Not found";
 
@@ -28,7 +29,7 @@ if (isset($_GET['sha256'])) {
     $sha256 = $_GET['sha256'];
 
     // This is our alphabet
-    $txt = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()_=+';
+    $txt = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz';
     $show = 15;
 
     // Outer loop go go through the alphabet for the
@@ -60,7 +61,7 @@ if (isset($_GET['sha256'])) {
                     $ch4 = $txt[$l];   //our fourth character 4th
 
 
-                    //Better not be performed unless optimized and in fewer arrays and loops 
+                    //Better not be performed unless optimized and performed in fewer arrays and loops 
 
                     /*
                     //5th
@@ -142,7 +143,7 @@ if (isset($_GET['sha256'])) {
 
     // Compute elapsed time
     $time_post = microtime(true);
-    print "Elapsed time: ";
+    print "\nElapsed time: ";
     print $time_post - $time_pre;
     print "\n";
 }
